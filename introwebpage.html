@@ -46,29 +46,34 @@
 			    </tr>
 			    <tr>
 			        <td class = "left-align" >DAA</td>
-			        <td class = "right-align">A+</td>
+			        <td id = "DAA" class = "right-align">91</td>
 			     
 			    </tr>
 			    <tr>
 			        <td class = "left-align" >SE</td>
-			        <td class = "right-align">A</td>
+			        <td id = "SE" class = "right-align" >92</td>
 			       
 			    </tr>
 			    <tr>
 			        <td class = "left-align" >WT</td>
-			        <td class = "right-align">A+</td>
+			        <td id = "WT" class = "right-align" >93</td>
 			       
 			    </tr>
 			     <tr>
 			        <td class = "left-align" >DCCN</td>
-			        <td class = "right-align">A+</td>
+			        <td id = "DCCN" class = "right-align">89</td>
 			       
 			    </tr>
 			     <tr>
 			        <td class = "left-align" >NCES</td>
-			        <td class = "right-align">O</td>
+			        <td id="NCES" class = "right-align" >98</td>
 			       
 			    </tr>
+			    <tr>
+			    	<td  class = "left-align"> Average</td>
+			    	<td  class = "right-align" id = "average" ></td>
+			    </tr>
+
 			</table>
 	</div>
 	<br><br>
@@ -78,5 +83,18 @@
 			Hello hidden text!
 		</p>
 	</div>
+	<script type="text/javascript" language="javascript">
+		m1 = parseInt(document.getElementById("DAA").innerHTML);
+		m2 = parseInt(document.getElementById("DCCN").innerHTML);
+		m3 = parseInt(document.getElementById("SE").innerHTML);
+		m4 = parseInt(document.getElementById("NCES").innerHTML);
+		m5 = parseInt(document.getElementById("WT").innerHTML);
+		
+		res = ( m1+ m2 + m3
+			 + m4 +m5)/5;
+		
+				document.getElementById("average").innerHTML = res;
+
+	</script>
 	</body>
 </html>
