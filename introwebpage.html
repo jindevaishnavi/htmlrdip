@@ -69,11 +69,15 @@
 			        <td id="NCES" class = "right-align" >98</td>
 			       
 			    </tr>
+			    
+			    <tr>
+			    	<td  class = "left-align"> Total Marks</td>
+			    	<td  class = "right-align" id = "total" ></td>
+			    </tr>
 			    <tr>
 			    	<td  class = "left-align"> Average</td>
 			    	<td  class = "right-align" id = "average" ></td>
 			    </tr>
-
 			</table>
 	</div>
 	<br><br>
@@ -91,8 +95,9 @@
 		m5 = parseInt(document.getElementById("WT").innerHTML);
 		
 		res = ( m1+ m2 + m3
-			 + m4 +m5)/5;
-		
+			 + m4 +m5);
+		document.getElementById("total").innerHTML = res;
+		res = res/5;
 				document.getElementById("average").innerHTML = res;
 
 	</script>

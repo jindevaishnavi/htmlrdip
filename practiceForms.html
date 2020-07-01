@@ -16,7 +16,7 @@
   <li><a href="./practiceForms.html">Register</a></li>
 	</ul>
 	<br>
-		<form action = "./regformphp.php" method = "get">
+		<form name = "form1" action = "./regformphp.php" onsubmit ="return validateForm()"method = "get">
 			  <label for="name">Name:</label><br><br>
 			  <input type="text" id="name" name="name"><br><br>
 			 <label for="phoneno">Phone Number:</label><br><br>
@@ -43,8 +43,90 @@
 				
 				<br>
 
-			  <input type="submit" value="SUBMIT" >
+			  <input type="submit" value="SUBMIT"   >
 		</form>
+		<script type="text/javascript" language="javascript">
+			function validateForm() {
+					var letters = /^[A-Za-z]+$/;
+				  var name = document.form1.name;
+				  var phone = document.form1.phoneno;
+				  var checkbox1 = document.form1.datascience;
+				  var checkbox2 = document.form1.machinelearning;
+				  var checkbox3 = document.form1.anthropology ;
+				  var checkbox4 = document.form1.quantumcomputing;
+				  correct = true; 
+				  if (name.value.match(letters)) {
+				  	
+				   if(allLetter(name))
+				   {
+				   	if(allnumeric(phoneno))
+				   if(checkCheckBoxes())
+				   {
+				   }
+				   }
+				}
+				   return true;
+				  /*if(!allnumeric(document.forms["form1"]["phoneno"].value))
+				  	return false;
+				  document.getElementById("description").innerHTML = checkCheckBoxes();
+				  if(!allLetter(document.forms["form1"]["name"].value))
+				  	return false;
+				  if(!checkCheckBoxes())
+				  	return false;*/
+				}
 
+				function phonenumber(inputtxt)
+				{
+					  var phoneno = /^\d{10}$/;
+					  if(inputtxt.value.match(phoneno))
+					        {
+					      return true;
+					        }
+					      else
+					        {
+					        alert("message");
+					        return false;
+					        }
+				}
+			function allLetter(inputtxt)
+			{
+
+				var letters = /^[A-Za-z]+$/;
+			      if(inputtxt.value.match(letters))
+			      {
+			      alert('Your name have accepted !');
+			      return true;
+			      }
+			      else
+			      {
+			      alert('Please input alphabet characters only');
+			      return false;
+			      }
+			}
+			function allnumeric(inputtxt)
+			   {
+			      var numbers = /^[0-9]+$/;
+			      if(!inputtxt.value.match(numbers))
+			      {
+			      alert('Please input numeric characters only...');
+
+			      return false;
+			      }
+			      return true;
+			   } 
+			function checkCheckBoxes() {
+				if (
+				document.forms["form1"]["datascience"].checked == false &&
+				document.forms["form1"]["machinelearning"].checked == false &&
+				document.forms["form1"]["anthropology"].checked == false && document.forms["form1"]["quantumcomputing"].checked == false) 
+				{
+					alert ('You didn\'t choose any of the checkboxes!');
+					return false;
+				} else { 	console.log("Form check done !")
+					return true;
+				}
+			}
+
+		</script>
 	</body>
 </html>
