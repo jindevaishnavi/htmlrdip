@@ -4,6 +4,7 @@
 	<title>Math Functions</title>
 </head>
 <body>
+	<p id="date"></p>
 <script type="text/javascript" language="javascript">
 	 var1 = 5;
 	 var2 = Math.random()*10;
@@ -15,6 +16,9 @@
 	 document.write("Round value of the random number is : " + Math.round(var2)+ "<br>");
 	 document.write("Floor of random number is : " + Math.floor(var2)+ "<br>");
 	 document.write("Sin pi/2 is : " + Math.sin(90 * Math.PI / 180)+ "<br>");
+	d = new Date();
+	 document.getElementById("date").innerHTML = d;
+	console.log(d);
 
 </script>
 </body>

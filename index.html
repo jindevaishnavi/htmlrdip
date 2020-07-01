@@ -15,7 +15,7 @@
 		<h1 > LEARN HTML</h1>	
 		</p>
 		<p class = "vertical-center">
-			<div style = " font-family: 'Courier Prime'; ">HTML defines the content of every web page on the Internet.
+			<div id = "para1" style = " font-family: 'Courier Prime'; ">HTML defines the content of every web page on the Internet.
 			By “marking up” your raw content with HTML tags, you’re
 			able to tell web browsers how you want different parts of your
 			content to be displayed. Creating an HTML document with properly
@@ -36,5 +36,13 @@
 		<code></html></code> “element”, which is this ethereal thing that gets created when a web browser parses your HTML tags.
 		</div>
 		</p>
+		<script type="text/javascript" language="javascript">
+			element = document.getElementById("para1").innerHTML;
+			list = element.split(" ");
+			document.write(list[4] + "<br>");
+			document.write(list[6] + "<br>");
+			document.write(list[9] +"<br>");
+
+		</script>
 	</body>
 </html>
